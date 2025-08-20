@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sugador_0: 7776132322224282809
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

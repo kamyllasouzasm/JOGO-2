@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c1ebed4a2b0331d4a8b9e9ad65803283
+guid: 8e30f06d6109a5549b25a53fbf60c1f3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4054039739660938499
-    second: giraffa_certa-removebg-preview_0
+      213: 573966779391056619
+    second: HIP_EXAM-removebg-preview (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: giraffa_certa-removebg-preview_0
+      name: HIP_EXAM-removebg-preview (1)_0
       rect:
         serializedVersion: 2
-        x: 85
-        y: 134
-        width: 124
-        height: 188
+        x: 0
+        y: 0
+        width: 421
+        height: 593
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 30daecbf9a7d24830800000000000000
-      internalID: 4054039739660938499
+      spriteID: bea9a7eaeb327f700800000000000000
+      internalID: 573966779391056619
       vertices: []
       indices: 
       edges: []
