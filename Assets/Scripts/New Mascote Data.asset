@@ -15,3 +15,5 @@ MonoBehaviour:
   mascotId: 
   spriteWaiting: {fileID: -1108038235246377309, guid: 0ac3ab537c1825246b10124daa10352e, type: 3}
   spriteExam: {fileID: 573966779391056619, guid: 8e30f06d6109a5549b25a53fbf60c1f3, type: 3}
+  examPosition: {x: 0.08, y: -0.78, z: -0.055438}
+  examScale: {x: 1.376948, y: 1.376948, z: 1.376948}

@@ -11,7 +11,13 @@ public class ConsultorioSetup : MonoBehaviour
         // Mostra o mascote escolhido
         if (GameSession.I != null && GameSession.I.selectedMascot != null)
         {
-            mascotRenderer.sprite = GameSession.I.selectedMascot.spriteExam;
+            var data = GameSession.I.selectedMascot;
+
+            mascotRenderer.sprite = data.spriteExam;
+
+            // 🔹 Ajustar automaticamente posição e escala
+            mascotRenderer.transform.localPosition = data.examPosition;
+            mascotRenderer.transform.localScale = data.examScale;
         }
 
         // Faz o fade-in da tela preta

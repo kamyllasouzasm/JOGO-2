@@ -47,5 +47,8 @@ TagManager:
   - name: Mascote
     uniqueID: 3188210109
     locked: 0
+  - name: Objetos
+    uniqueID: 2390493271
+    locked: 0
   m_RenderingLayers:
   - Default
