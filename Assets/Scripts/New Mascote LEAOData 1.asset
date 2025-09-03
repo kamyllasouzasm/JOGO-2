@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mascotId: 
   spriteWaiting: {fileID: 7967559313403837643, guid: 689959566078fe64c93eefc5cdca80c1, type: 3}
-  spriteExam: {fileID: 6325346769176254555, guid: 8b53297f6f59c97408971678ab5651b4, type: 3}
-  examPosition: {x: 0.08, y: -1.9, z: -0.055438}
-  examScale: {x: 0.446354, y: 0.446354, z: 0.446354}
+  spriteExam: {fileID: -1643750307475292276, guid: 7307c12a88dc7ae438c7130ea403267a, type: 3}
+  examPosition: {x: 0.08, y: -2.02, z: -0.055438}
+  examScale: {x: 2.923195, y: 2.923195, z: 2.923195}

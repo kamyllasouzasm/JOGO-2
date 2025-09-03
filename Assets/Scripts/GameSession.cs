@@ -9,7 +9,7 @@ public class GameSession : MonoBehaviour
     {
         if (I != null && I != this) { Destroy(gameObject); return; }
         I = this;
-        DontDestroyOnLoad(gameObject); // não destruir ao trocar de cena
+        DontDestroyOnLoad(gameObject); // não destroi quando trocar de cena
     }
 }
 
