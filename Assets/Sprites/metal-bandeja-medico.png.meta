@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      metal-bandeja-medico_0: -1187210974481253879
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

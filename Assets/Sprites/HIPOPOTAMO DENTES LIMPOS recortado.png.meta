@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7b88d8b56ac209d4a87295f92364d96e
+guid: 787bf095e52651545b3cc50101920452
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5866905141097279861
-    second: HIPOPOTAMO DENTES LIMPOS 1_0
+      213: -2267239674620575103
+    second: HIPOPOTAMO DENTES LIMPOS recortado_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HIPOPOTAMO DENTES LIMPOS 1_0
+      name: HIPOPOTAMO DENTES LIMPOS recortado_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 84
-        width: 408
-        height: 528
+        y: 0
+        width: 43
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b8ecbfdbbd0949ea0800000000000000
-      internalID: -5866905141097279861
+      spriteID: 182819d37852980e0800000000000000
+      internalID: -2267239674620575103
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      HIPOPOTAMO DENTES LIMPOS 1_0: -5866905141097279861
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
