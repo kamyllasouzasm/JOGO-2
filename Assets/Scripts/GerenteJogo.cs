@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +15,7 @@ public class GerenteJogo : MonoBehaviour
         Instancia = this;
     }
 
+    [Obsolete("Obsolete")]
     void Start()
     {
         totalDentes = FindObjectsOfType<Dente>().Length;

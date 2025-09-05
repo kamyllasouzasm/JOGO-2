@@ -3,24 +3,29 @@ using System.Collections;
 
 public class ConsultorioSetup : MonoBehaviour
 {
-    public SpriteRenderer mascotRenderer; // Mascote na cena
-    public ScreenFader fader;             // Tela preta para fade
+    public Transform mascoteRoot;   // arraste o MascoteRoot da cena aqui
+    public ScreenFader fader;       // arraste o ScreenFader do Canvas
+    public GameObject dentesHipopotamo; 
+    public GameObject dentesLeao;
 
     private IEnumerator Start()
     {
-        // Mostra o mascote escolhido
-        if (GameSession.I != null && GameSession.I.selectedMascot != null)
+        // Pega qual mascote foi escolhido
+        var data = GameSession.I != null ? GameSession.I.selectedMascot : null;
+        if (data != null)
         {
-            var data = GameSession.I.selectedMascot;
+            // Mostra o mascote certo com a boca aberta
+            var img = mascoteRoot.gameObject.AddComponent<SpriteRenderer>();
+            img.sprite = data.spriteExam; 
 
-            mascotRenderer.sprite = data.spriteExam;
-
-            // 🔹 Ajustar automaticamente posição e escala
-            mascotRenderer.transform.localPosition = data.examPosition;
-            mascotRenderer.transform.localScale = data.examScale;
+            // Instancia os dentes corretos
+            if (data.nome == "Hipopotamo" && dentesHipopotamo != null)
+                Instantiate(dentesHipopotamo, mascoteRoot);
+            else if (data.nome == "Leao" && dentesLeao != null)
+                Instantiate(dentesLeao, mascoteRoot);
         }
 
-        // Faz o fade-in da tela preta
+        // Faz o fade-in (abre a tela escura)
         if (fader != null)
             yield return fader.FadeTo(0f, 0.5f);
     }
