@@ -10,5 +10,6 @@ public class MascoteData : ScriptableObject
     public Vector3 examPosition;
     public Vector3 examScale;
     public string nome;
+    public Object prefabExame;
 }
 
