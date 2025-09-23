@@ -1,7 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName="Bichinhos/Mascote Data")]
-public class MascoteData : ScriptableObject
+public class MascoteData : MonoBehaviour
 {
     public string mascotId;
     public Sprite spriteWaiting; // sentado

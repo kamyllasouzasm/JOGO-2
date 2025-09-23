@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5590909208672864994}
   - component: {fileID: 2053705247078612945}
+  - component: {fileID: -5192232451952423987}
   m_Layer: 0
   m_Name: LeaoExame
   m_TagString: Untagged
@@ -88,6 +89,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-5192232451952423987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3603033489330374373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac078b4c0597ac440b3d123a660ae155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mascotId: 
+  spriteWaiting: {fileID: 0}
+  spriteExam: {fileID: 0}
+  prefabDentes: {fileID: 4174325497510777400, guid: 400169d3578d1154392655da659d8bd6, type: 3}
+  examPosition: {x: 0, y: 0, z: 0}
+  examScale: {x: 1, y: 1, z: 1}
+  nome: 
+  prefabExame: {fileID: 3603033489330374373}
 --- !u!1001 &1821293210082675949
 PrefabInstance:
   m_ObjectHideFlags: 0

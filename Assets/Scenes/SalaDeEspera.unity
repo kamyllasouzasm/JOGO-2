@@ -721,6 +721,7 @@ GameObject:
   - component: {fileID: 1419541699}
   - component: {fileID: 1419541702}
   - component: {fileID: 1419541701}
+  - component: {fileID: 1419541703}
   m_Layer: 0
   m_Name: LEAONORMAL
   m_TagString: Untagged
@@ -859,6 +860,26 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.46, y: 2.22}
   m_EdgeRadius: 0
+--- !u!114 &1419541703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419541698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac078b4c0597ac440b3d123a660ae155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mascotId: 
+  spriteWaiting: {fileID: 0}
+  spriteExam: {fileID: 0}
+  prefabDentes: {fileID: 4174325497510777400, guid: 400169d3578d1154392655da659d8bd6, type: 3}
+  examPosition: {x: 0, y: 0, z: 0}
+  examScale: {x: 0, y: 0, z: 0}
+  nome: 
+  prefabExame: {fileID: 3603033489330374373, guid: 015efd00c30e5a140863e452b79431ea, type: 3}
 --- !u!1 &1553225787
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,6 +892,7 @@ GameObject:
   - component: {fileID: 1553225788}
   - component: {fileID: 1553225791}
   - component: {fileID: 1553225790}
+  - component: {fileID: 1553225792}
   m_Layer: 0
   m_Name: hipopotamo
   m_TagString: Untagged
@@ -1009,6 +1031,26 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 16.29, y: 19.89}
   m_EdgeRadius: 0
+--- !u!114 &1553225792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553225787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac078b4c0597ac440b3d123a660ae155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mascotId: 
+  spriteWaiting: {fileID: 0}
+  spriteExam: {fileID: 0}
+  prefabDentes: {fileID: 4086152908592513491, guid: a7382f29d07825b48b7d94e961ec4dce, type: 3}
+  examPosition: {x: 0, y: 0, z: 0}
+  examScale: {x: 0, y: 0, z: 0}
+  nome: 
+  prefabExame: {fileID: 4550390334237020635, guid: 9cdf663468c2ab4419ca22b8624ca3f6, type: 3}
 --- !u!1 &1623642158
 GameObject:
   m_ObjectHideFlags: 0

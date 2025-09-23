@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8891267298089426749}
   - component: {fileID: 7484191918250486412}
+  - component: {fileID: 4674863931443232353}
   m_Layer: 0
   m_Name: HipopotamoExame
   m_TagString: Untagged
@@ -88,6 +89,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4674863931443232353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4550390334237020635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac078b4c0597ac440b3d123a660ae155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mascotId: 
+  spriteWaiting: {fileID: 0}
+  spriteExam: {fileID: 0}
+  prefabDentes: {fileID: 4086152908592513491, guid: a7382f29d07825b48b7d94e961ec4dce, type: 3}
+  examPosition: {x: 0, y: 0, z: 0}
+  examScale: {x: 1, y: 1, z: 1}
+  nome: 
+  prefabExame: {fileID: 4550390334237020635}
 --- !u!1001 &1393346528820567008
 PrefabInstance:
   m_ObjectHideFlags: 0

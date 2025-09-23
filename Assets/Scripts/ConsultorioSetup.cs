@@ -3,20 +3,34 @@ using System.Collections;
 
 public class ConsultorioSetup : MonoBehaviour
 {
-    public Transform mascoteRoot;   // Arraste o MascoteRoot da cena
-    public ScreenFader fader;       // Arraste o ScreenFader do Canvas
+    public Transform mascoteRoot; // arraste o objeto MascoteRoot da cena
+    public ScreenFader fader;     // arraste o ScreenFader do Canvas
 
     private IEnumerator Start()
     {
-        // Pega o mascote escolhido
         var data = GameSession.I != null ? GameSession.I.selectedMascot : null;
-        if (data != null)
+
+        if (data != null && data.prefabExame != null)
         {
-            // Instancia o prefab certo (hipo ou leão) dentro do MascoteRoot
-            Instantiate(data.prefabExame, mascoteRoot);
+            // Instancia o mascote escolhido
+            GameObject mascote = (GameObject)Instantiate(data.prefabExame, mascoteRoot);
+
+
+
+            // Define posição e escala do exame
+            mascote.transform.localPosition = data.examPosition;
+            mascote.transform.localScale = data.examScale;
+
+            // Instancia os dentes, se existir
+            if (data.prefabDentes != null)
+                Instantiate(data.prefabDentes, mascoteRoot);
+        }
+        else
+        {
+            Debug.LogError("⚠️ MascoteData não configurado corretamente!");
         }
 
-        // Faz o fade-in (tela preta → cena visível)
+        // Faz o fade-in da tela
         if (fader != null)
             yield return fader.FadeTo(0f, 0.5f);
     }
