@@ -3,34 +3,35 @@ using System.Collections;
 
 public class ConsultorioSetup : MonoBehaviour
 {
-    public Transform mascoteRoot; // arraste o objeto MascoteRoot da cena
-    public ScreenFader fader;     // arraste o ScreenFader do Canvas
+    public Transform mascoteRoot; // objeto vazio onde o mascote vai aparecer
+    public ScreenFader fader;     // tela preta para o fade
 
-    private IEnumerator Start()
+    IEnumerator Start()
     {
-        var data = GameSession.I != null ? GameSession.I.selectedMascot : null;
+        // pega o mascote escolhido na sala de espera
+        MascoteData data = GameSession.I != null ? GameSession.I.selectedMascot : null;
 
-        if (data != null && data.prefabExame != null)
+        if (data != null)
         {
-            // Instancia o mascote escolhido
-            GameObject mascote = (GameObject)Instantiate(data.prefabExame, mascoteRoot);
+            // apaga qualquer coisa que já estava no mascoteRoot
+            foreach (Transform filho in mascoteRoot)
+            {
+                Destroy(filho.gameObject);
+            }
 
-
-
-            // Define posição e escala do exame
+            // coloca o mascote na cena
+            GameObject mascote = Instantiate(data.prefabExame, mascoteRoot);
             mascote.transform.localPosition = data.examPosition;
             mascote.transform.localScale = data.examScale;
 
-            // Instancia os dentes, se existir
+            // coloca os dentes se tiver
             if (data.prefabDentes != null)
+            {
                 Instantiate(data.prefabDentes, mascoteRoot);
-        }
-        else
-        {
-            Debug.LogError("⚠️ MascoteData não configurado corretamente!");
+            }
         }
 
-        // Faz o fade-in da tela
+        // tira a tela preta (fade-in)
         if (fader != null)
             yield return fader.FadeTo(0f, 0.5f);
     }

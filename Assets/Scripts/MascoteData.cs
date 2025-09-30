@@ -1,14 +1,15 @@
 using UnityEngine;
 
-public class MascoteData : MonoBehaviour
+[CreateAssetMenu(fileName = "MascoteData", menuName = "Mascote/Data")]
+public class MascoteData : ScriptableObject
 {
-    public string mascotId;
-    public Sprite spriteWaiting; // sentado
-    public Sprite spriteExam;    // boca aberta NO CONSULTORIO
-    public GameObject prefabDentes;
-    public Vector3 examPosition;
-    public Vector3 examScale;
-    public string nome;
-    public Object prefabExame;
+    public string mascoteId;
+    public Sprite spriteWaiting;
+    public Sprite spriteExam;
+    public GameObject prefabDentes;   // <<--- GameObject
+    public GameObject prefabExame;    // <<--- GameObject
+    public Vector3 examPosition = Vector3.zero;
+    public Vector3 examScale = Vector3.one;
 }
+
 
