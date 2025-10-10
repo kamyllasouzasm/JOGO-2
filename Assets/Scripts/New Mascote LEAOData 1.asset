@@ -16,7 +16,6 @@ MonoBehaviour:
   spriteWaiting: {fileID: 7967559313403837643, guid: 689959566078fe64c93eefc5cdca80c1, type: 3}
   spriteExam: {fileID: -1643750307475292276, guid: 7307c12a88dc7ae438c7130ea403267a, type: 3}
   prefabDentes: {fileID: 3603033489330374373, guid: 015efd00c30e5a140863e452b79431ea, type: 3}
-  examPosition: {x: 0.08, y: -2.02, z: -0.055438}
-  examScale: {x: 2.923195, y: 2.923195, z: 2.923195}
-  nome: 
   prefabExame: {fileID: 3603033489330374373, guid: 015efd00c30e5a140863e452b79431ea, type: 3}
+  examPosition: {x: 0.08, y: -2.02, z: -0.05}
+  examScale: {x: 0.8, y: 0.8, z: 1}
