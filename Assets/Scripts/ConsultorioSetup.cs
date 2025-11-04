@@ -1,10 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
+
 public class ConsultorioSetup : MonoBehaviour
 {
     public Transform mascoteRoot; // arrasta MascoteRoot na cena
-    public ScreenFader fader;     // arrasta ScreenFader do Canvas
+    public ScreenFader fader; // arrasta ScreenFader do Canvas
+
 
     private IEnumerator Start()
     {
@@ -15,6 +17,7 @@ public class ConsultorioSetup : MonoBehaviour
             yield break;
         }
 
+
         // Instancia sem definir parent direto (às vezes evita problemas de escala)
         GameObject mascote = Instantiate(data.prefabExame) as GameObject;
         if (mascote == null)
@@ -23,30 +26,30 @@ public class ConsultorioSetup : MonoBehaviour
             yield break;
         }
 
+
         // coloca o mascote como filho do mascoteRoot (worldPositionStays = false preserva a posição local que setarmos)
         mascote.transform.SetParent(mascoteRoot, false);
+
 
         // definir posição / escala / rotação explicitamente em local space
         // se data.examPosition/examScale estiverem ok, usa; senão usa fallback
         // --- Definindo posição e escala manualmente por mascote ---
-        Vector3 pos;
-        Vector3 scl;
+        Vector3 pos = default;
+        Vector3 scl = default;
+
 
         if (data.name.Contains("Leao"))
         {
-            pos = new Vector3(0f, -1.5f, 0f);   // posição X, Y, Z do Leão
-            scl = new Vector3(2.978422f, 2.978422f, 2.978422f); // escala do Leão
+            pos = new Vector3(0f, -1.5f, 0f); // posição Leão
+            scl = new Vector3(2.978422f, 2.978422f, 2.978422f); // escala Leão
         }
         else if (data.name.Contains("Hipopotamo"))
         {
-            pos = new Vector3(0f, -0.55f, 0f);   // posição X, Y, Z do Hipopótamo
-            scl = new Vector3(1.470711f, 1.470711f, 1.470711f); // escala do Hipopótamo
+            pos = new Vector3(0f, -0.55f, 0f); // posição Hipopótamo
+            scl = new Vector3(1.470711f, 1.470711f, 1.470711f); // escala Hipopótamo
         }
-        else
-        {
-            pos = new Vector3(0f, -1f, 0f); // valor padrão (caso outro mascote)
-            scl = Vector3.one;
-        }
+
+
 
 // aplica
         mascote.transform.localPosition = pos;
@@ -54,12 +57,16 @@ public class ConsultorioSetup : MonoBehaviour
         mascote.transform.localRotation = Quaternion.identity;
 
 
+
+
         // se houver dentes, instancia como filho do próprio mascote (assim fica no lugar certo)
-        if (data.prefabDentes != null)
-            Instantiate(data.prefabDentes, mascote.transform, false);
+        // if (data.prefabDentes != null)
+//     Instantiate(data.prefabDentes, mascote.transform, false);
+
 
         // fade-in
         if (fader != null)
             yield return fader.FadeTo(0f, 0.5f);
     }
 }
+
