@@ -1,72 +1,62 @@
 using UnityEngine;
 using System.Collections;
 
-
 public class ConsultorioSetup : MonoBehaviour
 {
-    public Transform mascoteRoot; // arrasta MascoteRoot na cena
-    public ScreenFader fader; // arrasta ScreenFader do Canvas
-
+    public Transform mascoteRoot;
+    public ScreenFader fader;
 
     private IEnumerator Start()
     {
+        yield return new WaitForSeconds(0.1f);
+
+        // Limpa o root
+        foreach (Transform child in mascoteRoot)
+        {
+            Destroy(child.gameObject);
+        }
+
         var data = GameSession.I != null ? GameSession.I.selectedMascot : null;
         if (data == null)
         {
-            Debug.LogWarning("Nenhum Mascote selecionado em GameSession");
+            Debug.LogWarning("Nenhum mascote selecionado em GameSession");
             yield break;
         }
+// *** ADICIONE ISSO PARA DEBUGAR:
+        Debug.Log($"[ConsultorioSetup] selectedMascot name = '{data.name}'   prefabExame = {data.prefabExame}");
+        
+        // Instancia mascote
+        GameObject mascote = Instantiate(data.prefabExame, mascoteRoot);
+        mascote.transform.localPosition = Vector3.zero;
+        mascote.transform.localRotation = Quaternion.identity;
+        mascote.transform.localScale = Vector3.one;
+        
 
-
-        // Instancia sem definir parent direto (às vezes evita problemas de escala)
-        GameObject mascote = Instantiate(data.prefabExame) as GameObject;
-        if (mascote == null)
-        {
-            Debug.LogError("Erro: prefabExame não é GameObject válido");
-            yield break;
-        }
-
-
-        // coloca o mascote como filho do mascoteRoot (worldPositionStays = false preserva a posição local que setarmos)
-        mascote.transform.SetParent(mascoteRoot, false);
-
-
-        // definir posição / escala / rotação explicitamente em local space
-        // se data.examPosition/examScale estiverem ok, usa; senão usa fallback
-        // --- Definindo posição e escala manualmente por mascote ---
-        Vector3 pos = default;
-        Vector3 scl = default;
-
-
+        // Ajuste de posição e escala específicos
         if (data.name.Contains("Leao"))
         {
-            pos = new Vector3(0f, -1.5f, 0f); // posição Leão
-            scl = new Vector3(2.978422f, 2.978422f, 2.978422f); // escala Leão
+            mascote.transform.localPosition = new Vector3(0f, -0.7f, 0f);
+            mascote.transform.localScale = new Vector3(2.3f, 2.3f, 2.3f);
         }
+
         else if (data.name.Contains("Hipopotamo"))
         {
-            pos = new Vector3(0f, -0.55f, 0f); // posição Hipopótamo
-            scl = new Vector3(1.470711f, 1.470711f, 1.470711f); // escala Hipopótamo
+            mascote.transform.localPosition = new Vector3(0f, -0.55f, 0f);
+            mascote.transform.localScale = new Vector3(1.47f, 1.47f, 1.47f);
         }
 
+        // Garante dentes como filho do mascote
+        if (data.prefabDentes != null)
+        {
+            GameObject dentes = Instantiate(data.prefabDentes, mascote.transform);
+            dentes.transform.localPosition = Vector3.zero;
+            dentes.transform.localRotation = Quaternion.identity;
+            dentes.transform.localScale = Vector3.one;
+        }
 
-
-// aplica
-        mascote.transform.localPosition = pos;
-        mascote.transform.localScale = scl;
-        mascote.transform.localRotation = Quaternion.identity;
-
-
-
-
-        // se houver dentes, instancia como filho do próprio mascote (assim fica no lugar certo)
-        // if (data.prefabDentes != null)
-//     Instantiate(data.prefabDentes, mascote.transform, false);
-
-
-        // fade-in
         if (fader != null)
             yield return fader.FadeTo(0f, 0.5f);
     }
 }
+
 

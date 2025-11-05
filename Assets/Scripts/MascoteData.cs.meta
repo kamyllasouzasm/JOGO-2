@@ -1,2 +1,15 @@
 fileFormatVersion: 2
 guid: ac078b4c0597ac440b3d123a660ae155
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - spriteWaiting: {instanceID: 0}
+  - spriteExam: {instanceID: 0}
+  - prefabDentes: {instanceID: 0}
+  - prefabExame: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
