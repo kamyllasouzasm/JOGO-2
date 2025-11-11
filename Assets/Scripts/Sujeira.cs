@@ -16,7 +16,7 @@ public class Sujeira : MonoBehaviour
         dentePai = GetComponentInParent<Dente>();
     }
 
-    // Quando a ferramenta encosta, tenta limpar
+    // quando a ferramenta encosta, tenta limpar
     public void Limpar(float quanto, TipoFerramenta ferramenta)
     {
         if (!FerramentaCorreta(ferramenta)) return;
@@ -24,7 +24,7 @@ public class Sujeira : MonoBehaviour
         resistencia -= quanto;
         resistencia = Mathf.Clamp01(resistencia);
 
-        // Vai sumindo da tela
+        // vai sumindo da tela
         var cor = imagem.color;
         cor.a = resistencia;
         imagem.color = cor;

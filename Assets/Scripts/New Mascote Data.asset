@@ -18,4 +18,4 @@ MonoBehaviour:
   prefabDentes: {fileID: 4550390334237020635, guid: 9cdf663468c2ab4419ca22b8624ca3f6, type: 3}
   prefabExame: {fileID: 4550390334237020635, guid: 9cdf663468c2ab4419ca22b8624ca3f6, type: 3}
   examPosition: {x: 0.08, y: -2.78, z: -0.055438}
-  examScale: {x: 1.376948, y: 1.376948, z: 1.376948}
+  examScale: {x: 1, y: 1, z: 1}

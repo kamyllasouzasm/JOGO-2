@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mascotId: 
   spriteWaiting: {fileID: 7967559313403837643, guid: 689959566078fe64c93eefc5cdca80c1, type: 3}
-  spriteExam: {fileID: -1643750307475292276, guid: 7307c12a88dc7ae438c7130ea403267a, type: 3}
+  spriteExam: {fileID: -8925200540396465860, guid: 9103b623bd44a1c41ac558f4a6030890, type: 3}
   prefabDentes: {fileID: 3603033489330374373, guid: 015efd00c30e5a140863e452b79431ea, type: 3}
   prefabExame: {fileID: 3603033489330374373, guid: 015efd00c30e5a140863e452b79431ea, type: 3}
-  examPosition: {x: 0.08, y: -2.02, z: -0.055}
-  examScale: {x: 4.188951, y: 4.188951, z: 4.188951}
+  examPosition: {x: 0, y: -1.5, z: 0}
+  examScale: {x: 1, y: 1, z: 1}

@@ -6,11 +6,11 @@ public class Dente : MonoBehaviour
 
     void Start()
     {
-        // Conta quantas sujeiras existem dentro desse dente
+        // conta quantas sujeiras existem dentro desse dente
         sujeirasRestantes = GetComponentsInChildren<Sujeira>(true).Length;
     }
 
-    // Chamado quando uma sujeira é removida
+    // chamado qnd uma sujeira é removida
     public void AvisarSujeiraSaiu()
     {
         sujeirasRestantes--;
