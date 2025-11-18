@@ -161,6 +161,7 @@ GameObject:
   - component: {fileID: 2945015756140880927}
   - component: {fileID: 8562983051857803495}
   - component: {fileID: 5894378709626832974}
+  - component: {fileID: 1895541011152263830}
   m_Layer: 0
   m_Name: Dente_04
   m_TagString: Untagged
@@ -269,7 +270,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -297,6 +298,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da8abe423e88f94998f0b0be06a5e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1895541011152263830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2752110271768569091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f699e4ae4d109af40a148e3f2003df41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  denteLimpo: {fileID: -4965031987604337507, guid: 6616073e7e83401428c04977b7c7bb1e, type: 3}
 --- !u!1 &3471985742803595691
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,6 +323,7 @@ GameObject:
   - component: {fileID: 584809148452768339}
   - component: {fileID: 5239642204713393072}
   - component: {fileID: 8045813882394855724}
+  - component: {fileID: 546202094578168706}
   m_Layer: 0
   m_Name: Dente_03
   m_TagString: Untagged
@@ -417,7 +432,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -445,6 +460,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da8abe423e88f94998f0b0be06a5e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &546202094578168706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3471985742803595691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f699e4ae4d109af40a148e3f2003df41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  denteLimpo: {fileID: -2267239674620575103, guid: 787bf095e52651545b3cc50101920452, type: 3}
 --- !u!1 &3554280996644718184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,6 +1117,7 @@ GameObject:
   - component: {fileID: 7579131146647041450}
   - component: {fileID: 4692433589936411383}
   - component: {fileID: 1634000051963221689}
+  - component: {fileID: 565795611459336651}
   m_Layer: 0
   m_Name: Dente_02
   m_TagString: Untagged
@@ -1197,7 +1226,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1225,6 +1254,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da8abe423e88f94998f0b0be06a5e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &565795611459336651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7823395998892619551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f699e4ae4d109af40a148e3f2003df41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  denteLimpo: {fileID: -4965031987604337507, guid: 6616073e7e83401428c04977b7c7bb1e, type: 3}
 --- !u!1 &8400979891992748847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,6 +1279,7 @@ GameObject:
   - component: {fileID: 1364613656217418121}
   - component: {fileID: 2858296972431376137}
   - component: {fileID: 5376734924649035526}
+  - component: {fileID: 5120299785779828396}
   m_Layer: 0
   m_Name: Dente_05
   m_TagString: Untagged
@@ -1345,7 +1388,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1373,6 +1416,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da8abe423e88f94998f0b0be06a5e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5120299785779828396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8400979891992748847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f699e4ae4d109af40a148e3f2003df41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  denteLimpo: {fileID: -2267239674620575103, guid: 787bf095e52651545b3cc50101920452, type: 3}
 --- !u!1 &9010153872465093086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1385,6 +1441,7 @@ GameObject:
   - component: {fileID: 6252920853315758069}
   - component: {fileID: 80735810186266127}
   - component: {fileID: 5105922482795924819}
+  - component: {fileID: 4872578755191849511}
   m_Layer: 0
   m_Name: Dente_01
   m_TagString: Untagged
@@ -1493,7 +1550,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1521,3 +1578,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da8abe423e88f94998f0b0be06a5e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4872578755191849511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9010153872465093086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f699e4ae4d109af40a148e3f2003df41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  denteLimpo: {fileID: -4965031987604337507, guid: 6616073e7e83401428c04977b7c7bb1e, type: 3}
