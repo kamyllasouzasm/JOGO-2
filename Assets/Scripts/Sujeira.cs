@@ -36,6 +36,7 @@ public class Sujeira : MonoBehaviour
         }
     }
 
+
     bool FerramentaCorreta(TipoFerramenta f)
     {
         if (tipo == TipoSujeira.Placa)       return f == TipoFerramenta.Escova;

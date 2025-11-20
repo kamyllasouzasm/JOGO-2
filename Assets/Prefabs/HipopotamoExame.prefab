@@ -122,11 +122,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 231826669290855751, guid: a7382f29d07825b48b7d94e961ec4dce, type: 3}
       propertyPath: resistencia
-      value: 0.8
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 1028359507463737494, guid: a7382f29d07825b48b7d94e961ec4dce, type: 3}
       propertyPath: resistencia
-      value: 0.8
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4086152908592513491, guid: a7382f29d07825b48b7d94e961ec4dce, type: 3}
       propertyPath: m_Name
@@ -142,7 +142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5039180631846265810, guid: a7382f29d07825b48b7d94e961ec4dce, type: 3}
       propertyPath: resistencia
-      value: 0.8
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 5537653232195732130, guid: a7382f29d07825b48b7d94e961ec4dce, type: 3}
       propertyPath: m_LocalScale.x
@@ -198,7 +198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6462484693466138590, guid: a7382f29d07825b48b7d94e961ec4dce, type: 3}
       propertyPath: resistencia
-      value: 0.8
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 8239617137187661864, guid: a7382f29d07825b48b7d94e961ec4dce, type: 3}
       propertyPath: tipo
@@ -206,7 +206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8239617137187661864, guid: a7382f29d07825b48b7d94e961ec4dce, type: 3}
       propertyPath: resistencia
-      value: 0.8
+      value: 0.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

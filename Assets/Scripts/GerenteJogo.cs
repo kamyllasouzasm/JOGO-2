@@ -1,35 +1,27 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GerenteJogo : MonoBehaviour
 {
     public static GerenteJogo Instancia;
-
-    int totalDentes;
-    int dentesLimpinhos;
+    int dentesLimpos = 0;
+    public int quantidadeTotalSujeiras = 0;
 
     void Awake()
     {
-        if (Instancia != null && Instancia != this) { Destroy(gameObject); return; }
         Instancia = this;
     }
 
-    [Obsolete("Obsolete")]
-    void Start()
-    {
-        totalDentes = FindObjectsOfType<Dente>().Length;
-        dentesLimpinhos = 0;
-    }
-
+    // Chamada quando um dente fica limpo
     public void AvisarDenteLimpou()
     {
-        dentesLimpinhos++;
-        if (dentesLimpinhos >= totalDentes)
+        dentesLimpos++;
+
+        if (dentesLimpos >= quantidadeTotalSujeiras)
         {
-            // quando todos os dentes estão limpos, troca de cena
             SceneManager.LoadScene("VictoryScene");
         }
     }
 }
+
 
