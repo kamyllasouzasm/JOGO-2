@@ -7,7 +7,7 @@ public class Ferramenta : MonoBehaviour
 {
     public TipoFerramenta tipo = TipoFerramenta.Escova;
     public Transform ponta;                // arraste o filho "Ponta" no Inspector
-    public float forcaLimpeza = 0.9f;      // quanto limpa por segundo
+    public float forcaLimpeza = 30f;      // quanto limpa por segundo
     public AudioSource somLimpeza;
 
 
@@ -54,11 +54,9 @@ public class Ferramenta : MonoBehaviour
         {
             var sujeira = a.GetComponent<Sujeira>();
             if (sujeira != null)
-                sujeira.Limpar(qtd, tipo);
-            if (!somLimpeza.isPlaying)
-                somLimpeza.Play();
-
+                sujeira.Limpar(1f, tipo); // 1f = LIMPA TUDO DE UMA VEZ
         }
+
     }
 }
 

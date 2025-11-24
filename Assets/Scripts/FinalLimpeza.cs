@@ -9,13 +9,21 @@ public class FinalLimpeza : MonoBehaviour
     // chama quando terminar de limpar
     public void MostrarParabens()
     {
-        telaParabens.SetActive(true);
+        TextoParabens.SetActive(true);
     }
 
     // botão para voltar à sala de espera
     public void VoltarParaSala()
     {
         SceneManager.LoadScene("SalaDeEspera");
+    }
+}
+
+public class TextoParabens
+{
+    public static void SetActive(bool b)
+    {
+        throw new System.NotImplementedException();
     }
 }
 

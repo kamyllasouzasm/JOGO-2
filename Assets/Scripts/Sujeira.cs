@@ -25,24 +25,14 @@ public class Sujeira : MonoBehaviour
         resistencia -= quanto;
         resistencia = Mathf.Clamp01(resistencia);
 
-        // vai sumindo da tela
-        var cor = imagem.color;
-        cor.a = resistencia;
-        imagem.color = cor;
-
         if (resistencia <= 0f)
         {
             dentePai?.AvisarSujeiraSaiu();
-
-            // Para o som
-            Ferramenta ferramenta1 = FindObjectOfType<Ferramenta>();
-            if (ferramenta1 != null && ferramenta1.somLimpeza != null)
-                ferramenta1.somLimpeza.Stop();
-
             Destroy(gameObject);
         }
-
     }
+
+
 
 
     bool FerramentaCorreta(TipoFerramenta f)
