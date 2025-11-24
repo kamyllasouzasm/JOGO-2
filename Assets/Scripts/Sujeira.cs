@@ -35,9 +35,9 @@ public class Sujeira : MonoBehaviour
             dentePai?.AvisarSujeiraSaiu();
 
             // Para o som
-            var ferramenta = FindObjectOfType<Ferramenta>();
-            if (ferramenta != null && ferramenta.somLimpeza != null)
-                ferramenta.somLimpeza.Stop();
+            Ferramenta ferramenta1 = FindObjectOfType<Ferramenta>();
+            if (ferramenta1 != null && ferramenta1.somLimpeza != null)
+                ferramenta1.somLimpeza.Stop();
 
             Destroy(gameObject);
         }
