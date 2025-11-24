@@ -18,7 +18,7 @@ public class SelecionarPersonagem : MonoBehaviour
         // Se a telaPreta não foi ligada no Inspector, vai direto (fallback)
         if (telaPreta == null)
         {
-            SceneManager.LoadScene("Consultorio");
+            //SceneManager.LoadScene(nome);
             return;
         }
 
@@ -46,6 +46,6 @@ public class SelecionarPersonagem : MonoBehaviour
             yield return null;
         }
 
-        SceneManager.LoadScene("Consultorio");
+         SceneManager.LoadScene("Consultorio2");
     }
 }
