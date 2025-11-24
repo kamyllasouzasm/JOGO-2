@@ -3,6 +3,7 @@ using UnityEngine;
 public class Dente : MonoBehaviour
 {
     private int sujeirasRestantes;
+    
 
     void Start()
     {

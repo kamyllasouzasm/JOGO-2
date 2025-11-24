@@ -8,6 +8,8 @@ public class Ferramenta : MonoBehaviour
     public TipoFerramenta tipo = TipoFerramenta.Escova;
     public Transform ponta;                // arraste o filho "Ponta" no Inspector
     public float forcaLimpeza = 0.9f;      // quanto limpa por segundo
+    public AudioSource somLimpeza;
+
 
     bool segurando;
     Vector3 diferencaMouse;
@@ -45,12 +47,17 @@ public class Ferramenta : MonoBehaviour
         // Verifica sujeiras embaixo da ponta
         var acertos = Physics2D.OverlapPointAll(ponta.position);
         float qtd = forcaLimpeza * Time.deltaTime;
+        
+        bool limpandoAgora = false; 
 
         foreach (var a in acertos)
         {
             var sujeira = a.GetComponent<Sujeira>();
             if (sujeira != null)
                 sujeira.Limpar(qtd, tipo);
+            if (!somLimpeza.isPlaying)
+                somLimpeza.Play();
+
         }
     }
 }

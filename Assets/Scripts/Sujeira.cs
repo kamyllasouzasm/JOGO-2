@@ -6,6 +6,7 @@ public class Sujeira : MonoBehaviour
 {
     public TipoSujeira tipo = TipoSujeira.Placa;
     [Range(0.2f, 2f)] public float resistencia = 1f; // 1 = muito sujo, 0 = limpo
+    
 
     SpriteRenderer imagem;
     Dente dentePai;
@@ -32,8 +33,15 @@ public class Sujeira : MonoBehaviour
         if (resistencia <= 0f)
         {
             dentePai?.AvisarSujeiraSaiu();
+
+            // Para o som
+            var ferramenta = FindObjectOfType<Ferramenta>();
+            if (ferramenta != null && ferramenta.somLimpeza != null)
+                ferramenta.somLimpeza.Stop();
+
             Destroy(gameObject);
         }
+
     }
 
 
