@@ -11,7 +11,7 @@ public class ScreenFader : MonoBehaviour
         cg = GetComponent<CanvasGroup>();
     }
 
-    // faz o fade da tela (0 = transparente, 1 = preto)
+    
     public IEnumerator FadeTo(float targetAlpha, float duration)
     {
         float startAlpha = cg.alpha;
@@ -24,7 +24,7 @@ public class ScreenFader : MonoBehaviour
             yield return null;
         }
 
-        cg.alpha = targetAlpha; // garante que termina no valor q eu quero
+        cg.alpha = targetAlpha; 
     }
 }
 

@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class BotaoVoltarInicioR : MonoBehaviour
 {
-    public string nomeCenaInicio = "Inicio";  // coloque exatamente o nome da sua cena inicial
+    public string nomeCenaInicio = "Inicio"; 
 
     public void IrParaInicio()
     {

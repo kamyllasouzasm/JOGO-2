@@ -24,20 +24,20 @@ public class ItemDropTarget : MonoBehaviour, IDropHandler
             return;
         }
 
-        // 1) Aumenta a saúde *uma vez* com o valor do item
+       
         controle.AumentarSaude(item.valor);
 
-        // 2) Chama o método para tratar a etapa (mostrar próximo balão / finalizar)
+        
         if (tipo == "injecao")
-            controle.AplicarInjecao();      // mostra balão do curativo
+            controle.AplicarInjecao();      
         else if (tipo == "curativo")
-            controle.AplicarCurativo();     // mostra balão do termômetro
+            controle.AplicarCurativo();    
         else if (tipo == "termometro")
-            controle.AplicarTermometro();   // finaliza se saúde >= 100
+            controle.AplicarTermometro();  
         else
             Debug.LogWarning("[ItemDropTarget] tipo não reconhecido: " + item.tipo);
 
-        // 3) remove o item usado
+        
         Destroy(item.gameObject);
     }
 }

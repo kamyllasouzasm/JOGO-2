@@ -4,15 +4,15 @@ using UnityEngine.SceneManagement;
 
 public class FinalLimpeza : MonoBehaviour
 {
-    public GameObject telaParabens; // painel da tela de parabéns
+    public GameObject telaParabens; 
 
-    // chama quando terminar de limpar
+    
     public void MostrarParabens()
     {
         TextoParabens.SetActive(true);
     }
 
-    // botão para voltar à sala de espera
+    
     public void VoltarParaSala()
     {
         SceneManager.LoadScene("SalaDeEspera");

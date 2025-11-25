@@ -32,9 +32,9 @@ public class ControleSaude : MonoBehaviour
     public GameObject confetes;
 
     [Header("Áudio")] 
-    public AudioSource audioSource;          // <-- ADICIONADO
-    public AudioClip somInjecao;             // <-- ADICIONADO
-    public AudioClip somCurativo;            // <-- ADICIONADO
+    public AudioSource audioSource;         
+    public AudioClip somInjecao;             
+    public AudioClip somCurativo;           
 
     private float saude = 0f;
     private const float SAUDE_MAX = 100f;
@@ -102,14 +102,14 @@ public class ControleSaude : MonoBehaviour
         }
     }
 
-    // --- métodos chamados pelo ItemDropTarget ---
+  
     public void AplicarInjecao()
     {
         if (injecaoDada) return;
         injecaoDada = true;
 
         if (audioSource != null && somInjecao != null)
-            audioSource.PlayOneShot(somInjecao);   // <-- SOM TOCA AQUI
+            audioSource.PlayOneShot(somInjecao);   
 
         MostrarBalaoCurativo();
     }
@@ -120,7 +120,7 @@ public class ControleSaude : MonoBehaviour
         curativoDado = true;
 
         if (audioSource != null && somCurativo != null)
-            audioSource.PlayOneShot(somCurativo);  // <-- SOM DO CURATIVO AQUI
+            audioSource.PlayOneShot(somCurativo);  
 
         MostrarBalaoTermometro();
     }

@@ -17,7 +17,7 @@ public class ConsultorioSetup : MonoBehaviour
             Debug.LogWarning("Nenhum mascote selecionado em GameSession");
             yield break;
         }
-// DEBUGAR
+
         Debug.Log($"[ConsultorioSetup] selectedMascot name = '{data.name}'   prefabExame = {data.prefabExame}");
         
         

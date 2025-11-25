@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LimparDente : MonoBehaviour
 {
-    public Sprite denteLimpo;   // arraste o sprite limpo no Inspector
+    public Sprite denteLimpo;   
     private SpriteRenderer sr;
     private bool limpo = false;
 
@@ -15,7 +15,7 @@ public class LimparDente : MonoBehaviour
     {
         if (!limpo)
         {
-            // quando qualquer ferramenta encostar → limpa
+            
             sr.sprite = denteLimpo;
             limpo = true;
         }

@@ -6,8 +6,8 @@ public enum TipoFerramenta { Escova, Fio, Sugador }
 public class Ferramenta : MonoBehaviour
 {
     public TipoFerramenta tipo = TipoFerramenta.Escova;
-    public Transform ponta;                // arraste o filho "Ponta" no Inspector
-    public float forcaLimpeza = 30f;      // quanto limpa por segundo
+    public Transform ponta;                
+    public float forcaLimpeza = 30f;      
     public AudioSource somLimpeza;
 
 
@@ -28,7 +28,7 @@ public class Ferramenta : MonoBehaviour
         segurando = true;
         var mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         diferencaMouse = transform.position - new Vector3(mouse.x, mouse.y, 0);
-        if (imagem) imagem.sortingOrder = 100; // fica na frente
+        if (imagem) imagem.sortingOrder = 100; 
     }
 
     void OnMouseUp()
@@ -44,7 +44,7 @@ public class Ferramenta : MonoBehaviour
         var mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(mouse.x, mouse.y, 0) + diferencaMouse;
 
-        // Verifica sujeiras embaixo da ponta
+        
         var acertos = Physics2D.OverlapPointAll(ponta.position);
         float qtd = forcaLimpeza * Time.deltaTime;
         
@@ -54,7 +54,7 @@ public class Ferramenta : MonoBehaviour
         {
             var sujeira = a.GetComponent<Sujeira>();
             if (sujeira != null)
-                sujeira.Limpar(1f, tipo); // 1f = LIMPA TUDO DE UMA VEZ
+                sujeira.Limpar(1f, tipo); 
         }
 
     }

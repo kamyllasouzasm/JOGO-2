@@ -5,7 +5,7 @@ public enum TipoSujeira { Placa, EntreDente, Baba }
 public class Sujeira : MonoBehaviour
 {
     public TipoSujeira tipo = TipoSujeira.Placa;
-    [Range(0.2f, 2f)] public float resistencia = 1f; // 1 = muito sujo, 0 = limpo
+    [Range(0.2f, 2f)] public float resistencia = 1f; 
     
 
     SpriteRenderer imagem;
@@ -17,7 +17,7 @@ public class Sujeira : MonoBehaviour
         dentePai = GetComponentInParent<Dente>();
     }
 
-    // quando a ferramenta encosta, tenta limpar
+    
     public void Limpar(float quanto, TipoFerramenta ferramenta)
     {
         if (!FerramentaCorreta(ferramenta)) return;

@@ -4,16 +4,16 @@ using UnityEngine.UI;
 public class BalaoDeFala : MonoBehaviour
 {
     [Header("Configurações do Balão")]
-    public GameObject balaoObjeto; // o GameObject do balão (com a imagem e texto)
-    public Text textoMensagem;     // o texto dentro do balão
-    public Transform personagem;   // o personagem sobre o qual o balão aparece
-    public Vector3 offset = new Vector3(0, 2f, 0); // altura acima da cabeça
+    public GameObject balaoObjeto; 
+    public Text textoMensagem;    
+    public Transform personagem;   
+    public Vector3 offset = new Vector3(0, 2f, 0); 
 
     void Update()
     {
         if (balaoObjeto.activeSelf && personagem != null)
         {
-            // Faz o balão seguir o personagem na tela
+            
             Vector3 posTela = Camera.main.WorldToScreenPoint(personagem.position + offset);
             balaoObjeto.transform.position = posTela;
         }

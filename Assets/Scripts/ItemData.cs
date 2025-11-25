@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ItemData : MonoBehaviour
 {
-    public string tipo;    // injecao / curativo / termometro  
+    public string tipo;    
     public float valor = 30f;
 }
 

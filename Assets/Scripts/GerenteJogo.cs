@@ -14,7 +14,7 @@ public class GerenteJogo : MonoBehaviour
         Instancia = this;
     }
 
-    // Chamada quando um dente fica limpo
+    
     public void AvisarDenteLimpou()
     {
         dentesLimpos++;
@@ -25,7 +25,7 @@ public class GerenteJogo : MonoBehaviour
         }
     }
     
-    public GameObject textoParabens; // arraste no Inspector
+    public GameObject textoParabens; 
 
     void FinalLimpeza()
     {

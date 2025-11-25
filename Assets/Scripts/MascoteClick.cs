@@ -9,20 +9,20 @@ public class MascoteClick : MonoBehaviour
 
     void OnMouseDown()
     {
-        // guarda o mascote escolhido
+        
         GameSession.I.selectedMascot = data;
 
-        // inicia a troca de cena
+        
         StartCoroutine(LoadConsultorio());
     }
 
     System.Collections.IEnumerator LoadConsultorio()
     {
-        // se tiver fader, faz o fade
+        
         if (fader != null)
             yield return fader.FadeTo(1f, 0.4f);
 
-        // carrega o consultório
+       
         SceneManager.LoadScene(consultorioSceneName);
     }
 }

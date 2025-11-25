@@ -5,20 +5,20 @@ using UnityEngine.UI;
 public class SelecionarPersonagem : MonoBehaviour
 {
     public static string personagemEscolhido;
-    public Image telaPreta;      // arraste a Image aqui no Inspector
+    public Image telaPreta;     
     public float tempoFade = 0.5f;
     bool emTransicao = false;
 
     public void EscolherPersonagem(string nome)
     {
-        if (emTransicao) return; // evita clique duplo
+        if (emTransicao) return; 
         personagemEscolhido = nome;
         Debug.Log("Personagem selecionado: " + personagemEscolhido);
 
-        // Se a telaPreta não foi ligada no Inspector, vai direto (fallback)
+        
         if (telaPreta == null)
         {
-            //SceneManager.LoadScene(nome);
+           
             return;
         }
 
@@ -29,12 +29,12 @@ public class SelecionarPersonagem : MonoBehaviour
     {
         emTransicao = true;
 
-        // Garante que a imagem está visível e começando transparente
+       
         var cor = telaPreta.color;
         cor.a = 0f;
         telaPreta.color = cor;
 
-        // Não deixe a TelaPreta bloquear cliques antes do fade
+       
         telaPreta.raycastTarget = false;
 
         float t = 0f;

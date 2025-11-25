@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(RectTransform))]
 public class ItemDragUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public Canvas canvas;              // arraste o Canvas no Inspector
+    public Canvas canvas;              
     RectTransform rt;
     CanvasGroup cg;
     Vector2 inicioAnchored;
@@ -19,7 +19,7 @@ public class ItemDragUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public void OnBeginDrag(PointerEventData eventData)
     {
         inicioAnchored = rt.anchoredPosition;
-        cg.blocksRaycasts = false; // permite que o drop receba o evento
+        cg.blocksRaycasts = false; 
         Debug.Log(name + " BeginDrag");
     }
 
@@ -27,7 +27,7 @@ public class ItemDragUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     {
         Vector2 pos;
         RectTransform canvasRect = canvas.transform as RectTransform;
-        // converte posição de tela para ancorada dentro do Canvas
+        
         RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, eventData.position, canvas.worldCamera, out pos);
         rt.anchoredPosition = pos;
     }
@@ -35,7 +35,7 @@ public class ItemDragUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public void OnEndDrag(PointerEventData eventData)
     {
         cg.blocksRaycasts = true;
-        // Se não soltar em Drop (pointerEnter null ou sem ItemDropTarget), volta
+        
         if (eventData.pointerEnter == null || eventData.pointerEnter.GetComponentInParent<ItemDropTarget>() == null)
         {
             rt.anchoredPosition = inicioAnchored;
