@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
+
 
 public class ControleSaude : MonoBehaviour
 {
@@ -27,9 +29,13 @@ public class ControleSaude : MonoBehaviour
     public TMP_Text textoTermometro;
 
     [Header("Efeitos")]
-    public GameObject confetes;   // <-- ARRASTE AQUI O OBJETO DE CONFETES (UI Image)
+    public GameObject confetes;
 
-    // saúde interna
+    [Header("Áudio")] 
+    public AudioSource audioSource;          // <-- ADICIONADO
+    public AudioClip somInjecao;             // <-- ADICIONADO
+    public AudioClip somCurativo;            // <-- ADICIONADO
+
     private float saude = 0f;
     private const float SAUDE_MAX = 100f;
 
@@ -46,21 +52,17 @@ public class ControleSaude : MonoBehaviour
         if (personagemImage != null) personagemImage.sprite = triste;
         if (personagemSprite != null) personagemSprite.sprite = triste;
 
-        // Confetes começam desativados
         if (confetes != null) confetes.SetActive(false);
 
         EsconderTodosBaloes();
-        MostrarBalaoInjecao(); 
-        Debug.Log("[ControleSaude] Start. saude=" + saude);
+        MostrarBalaoInjecao();
     }
 
     public void AumentarSaude(float valor)
     {
-        Debug.Log("[ControleSaude] AumentarSaude chamado. valor=" + valor + " antes saude=" + saude);
         saude += valor;
         if (saude > SAUDE_MAX) saude = SAUDE_MAX;
         if (barraSaude != null) barraSaude.value = saude / SAUDE_MAX;
-        Debug.Log("[ControleSaude] Após aumento -> saude=" + saude + " barra=" + (barraSaude != null ? barraSaude.value.ToString() : "no slider"));
     }
 
     void EsconderTodosBaloes()
@@ -76,7 +78,7 @@ public class ControleSaude : MonoBehaviour
         if (balaoInjecao != null)
         {
             balaoInjecao.SetActive(true);
-            if (textoInjecao != null) textoInjecao.text = "Hora da injeção! ";
+            if (textoInjecao != null) textoInjecao.text = "Hora da injeção!";
         }
     }
 
@@ -86,7 +88,7 @@ public class ControleSaude : MonoBehaviour
         if (balaoCurativo != null)
         {
             balaoCurativo.SetActive(true);
-            if (textoCurativo != null) textoCurativo.text = "Agora coloque o curativo! ";
+            if (textoCurativo != null) textoCurativo.text = "Agora coloque o curativo!";
         }
     }
 
@@ -96,7 +98,7 @@ public class ControleSaude : MonoBehaviour
         if (balaoTermometro != null)
         {
             balaoTermometro.SetActive(true);
-            if (textoTermometro != null) textoTermometro.text = " Vamos lá, falta pouco para ele se curar é a vez do termomêtro!";
+            if (textoTermometro != null) textoTermometro.text = "Falta pouco, hora do termômetro!";
         }
     }
 
@@ -106,7 +108,9 @@ public class ControleSaude : MonoBehaviour
         if (injecaoDada) return;
         injecaoDada = true;
 
-        Debug.Log("[ControleSaude] AplicarInjecao() - injecaoDada set true");
+        if (audioSource != null && somInjecao != null)
+            audioSource.PlayOneShot(somInjecao);   // <-- SOM TOCA AQUI
+
         MostrarBalaoCurativo();
     }
 
@@ -115,7 +119,9 @@ public class ControleSaude : MonoBehaviour
         if (!injecaoDada || curativoDado) return;
         curativoDado = true;
 
-        Debug.Log("[ControleSaude] AplicarCurativo() - curativoDado set true");
+        if (audioSource != null && somCurativo != null)
+            audioSource.PlayOneShot(somCurativo);  // <-- SOM DO CURATIVO AQUI
+
         MostrarBalaoTermometro();
     }
 
@@ -124,35 +130,23 @@ public class ControleSaude : MonoBehaviour
         if (!curativoDado || termometroUsado) return;
         termometroUsado = true;
 
-        Debug.Log("[ControleSaude] AplicarTermometro() - termometroUsado set true");
         EsconderTodosBaloes();
 
         if (saude >= SAUDE_MAX)
         {
             Recuperado();
         }
-        else
-        {
-            Debug.Log("[ControleSaude] Termometro aplicado mas saude insuficiente: " + saude);
-        }
     }
 
     void Recuperado()
     {
-        Debug.Log("[ControleSaude] Recuperado() chamado. saude=" + saude);
-
         if (personagemImage != null) personagemImage.sprite = feliz;
         if (personagemSprite != null) personagemSprite.sprite = feliz;
 
         if (parabensTexto != null) parabensTexto.SetActive(true);
-
-        // LIGA OS CONFETES
         if (confetes != null) confetes.SetActive(true);
 
-        // opcional: esconder confetes antes de trocar de cena
         Invoke(nameof(EsconderConfetes), 1.8f);
-
-        // volta à sala depois de 2s
         Invoke(nameof(Voltar), 2f);
     }
 
